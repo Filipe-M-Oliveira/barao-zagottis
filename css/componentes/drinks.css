@@ -1,0 +1,107 @@
+@import url(variaveis.css);
+:root {
+    --dark-bg: #0d1117;
+    --light-text: #E6F1F1;
+    --amarelinha: #FFD700;
+}
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+}
+/* CONTAINER */
+.drinks-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+/* TÍTULO */
+.div-drinks h2 {
+    margin: 20px 0 40px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--amarelinha);
+    text-align: center;
+}
+/* GRID */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(180px, 1fr)); /* 5 por linha */
+    gap: 20px;
+}
+/* CARD */
+.card {
+    background: #161b22;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+}
+/* EFEITO OVERLAY */
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    opacity: 0;
+    transition: 0.3s;
+}
+.card:hover::after {
+    opacity: 1;
+}
+/* IMAGEM */
+.card img {
+    width: 100%;
+    aspect-ratio: 1 / 1.3;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: 0.4s;
+}
+.card:hover img {
+    transform: scale(1.06);
+    opacity: 1;
+}
+/* TEXTO */
+.card-info {
+    padding: 18px;
+    text-align: center;
+}
+.card-info h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: var(--gold);
+}
+.card-info p {
+    font-size: 12px;
+    color: #aaa;
+}
+/* RESPONSIVO */
+@media (max-width: 1200px) {
+    .grid-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .grid-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .grid-cards {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,39 @@
+
+.mapa-caixa {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+    margin-bottom: 80px;
+}
+
+/* colunas */
+.mapa-container,
+.funcionamento,
+.convite {
+    flex: 1;
+}
+
+/* controla o mapa */
+.mapa-container {
+    max-width: 400px;
+}
+
+/* MAPA FIXO */
+iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* textos */
+.funcionamento {
+    max-width: 300px;
+}
+
+.convite {
+    max-width: 300px;
+}
+
+

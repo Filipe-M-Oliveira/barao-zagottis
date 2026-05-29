@@ -1,0 +1,261 @@
+@import url(variaveis.css);
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel+Decorative:wght@400;700;900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* FAIXA 1 (INSTITUCIONAL) */
+.faixa1 {
+    width: 100%;
+    background: #111;
+    color: #fff;
+    padding: 60px 0;
+    position: relative;
+    bottom: 60px;
+}
+
+.container-faixa1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+/* imagem */
+.imagem {
+    flex: 1;
+}
+.imagem img {
+    width: 100%;
+    border-radius: 10px;
+}
+/* texto */
+.texto {
+    flex: 1;
+}
+
+.texto h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--amarelinha);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.texto p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+    .container-faixa1 {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* FAIXA 2 (CARROSSEL) */
+.faixa2 {
+    width: 100%;
+    height: 440px;
+    background: #111;
+    overflow: hidden;
+    padding: 20px;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.faixa2 .faixa {
+    width: 100%;
+    overflow: hidden;
+}
+.faixa2 .faixa .slider {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+}
+
+.faixa2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(to right, #111, transparent);
+    z-index: 2;
+}
+/* sombra direita */
+.faixa2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(to left, #111, transparent);
+    z-index: 2;
+}
+
+.slider img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+.slider img {
+    height: 400px;
+    border-radius: 10px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.faixa:hover .slider {
+    animation-play-state: paused;
+}
+/* animação */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* apresentação */
+.container-apresentacao{
+    position:relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;    
+    padding: 80px 0; 
+    margin-bottom: 100px;    
+    transition: box-shadow 0.5s ease;      
+}
+
+.bg_apresentacao{
+    position: absolute;
+    width: 1309px;
+    height: 700px;
+    border-radius: 12px;
+    background: #FFF;
+    margin-bottom: 50px;
+    z-index: 1;
+    
+}
+
+.bg_apresentacao img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 33px;   
+    box-shadow: 0 4px 76px 0 rgba(0, 0, 0, 0.25);
+    filter: blur(6.900000095367432px);
+}
+
+.apresentacao{
+    position: absolute;
+    justify-content: space-between;
+    width: 566px;
+    height: 566px;
+    aspect-ratio: 1/1;
+    z-index: 2;
+    margin-right: 450px;
+}
+
+.apresentacao img{
+    border-radius: 20px;
+    background: lightgray 30% / cover no-repeat;
+}
+.apresentacao_text{
+    width: 542px;
+    height: 316px;
+    background: rgba(28.70, 28.70, 28.70, 0.39); 
+    border-radius: 13px;
+    z-index: 2;
+    margin-left: 720px;
+    margin-bottom: 150px;
+    text-align: left;
+    padding: 20px;
+    
+}
+
+.apresentacao_text h1{
+    font-family:'Cinzel Decorative';
+    font-style:bold;
+    text-shadow: 3px 6px 3px rgba(0, 0, 0, 0.25);
+    font-size: 50px;
+}
+
+.apresentacao_text h4{
+    font-family:'Bodoni Moda';
+    font-style:normal;
+    text-shadow: 3px 6px 3px rgba(0, 0, 0, 0.25);
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.fade-in1 {
+    overflow: hidden;
+    position: relative;
+}
+
+/* faixa efeito */
+.fade-in1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff; 
+    z-index: 5;
+    
+    animation: revealSlide 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+/* animação do fundo saindo */
+@keyframes revealSlide {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.fade-in2 {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.bg_apresentacao {
+    animation-delay: 0.3s;
+}
+
+.apresentacao {
+    animation-delay: 0.8s;
+}
+
+.apresentacao_text {
+    animation-delay: 1s;
+}
+
+/* animação subida */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp2 {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* sombra quando ativa */
+.container-apresentacao.ativo {
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}

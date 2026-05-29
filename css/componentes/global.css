@@ -1,0 +1,68 @@
+body { 
+    font-family: "Lora", serif;
+    color: var(--white--900);
+    background-color: var(--black--900);
+    /* font-size: 20px; */
+}
+.header__container img {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: auto;
+}
+
+.header__atuacao {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: auto;
+}
+
+.footer {
+    width: 100%;
+    max-width:100%;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px; /* Reduz o padding lateral */
+    }
+
+    .header__container img, .header__atuacao {
+        padding: 0 10px; /* Reduz o padding lateral */
+    }
+
+    .main__container {
+        padding: 20px 10px; /* Reduz o padding interno */
+    }
+
+    .footer {
+        padding: 10px; /* Reduz o padding interno */
+    }
+}
+
+@media print {
+    body {
+        font-family: "Lora", serif;
+        background-color: var(--red--900);
+        color: #fff;
+    }
+
+    .no-print {
+        display: none;
+    }
+
+    @page {
+        margin: 1cm;
+    }
+
+    .content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    /* Adicione outros estilos específicos para impressão aqui */
+}
+
+
+

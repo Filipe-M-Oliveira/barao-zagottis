@@ -1,0 +1,65 @@
+@import url(variaveis.css);
+.hero-restaurante {
+    background-color: #000000cc;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/src/midia/imagem/faixada.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-blend-mode:soft-light;
+    position: relative;
+    overflow: hidden;
+}
+ 
+ 
+.container-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: rgba(0, 0, 0, 0.326);
+}
+ 
+.container-header h1 {
+    color: #fff;
+    font-size: 24px;
+}
+ 
+.container-header .col img {
+    border-radius: 50%;
+    width: fit-content;
+}
+ 
+.links-cabecalho nav{
+    display: flex;
+    gap: 40px;
+}
+.links-cabecalho nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+ 
+.links-cabecalho nav a:hover {
+    color: var(--amarelinha);
+}
+ 
+.apresentacao{
+    
+    width: 1309px;
+    height: 721px;
+    border-radius: 12px;
+    background: #FFF;
+}
+ 
+
+
+
+

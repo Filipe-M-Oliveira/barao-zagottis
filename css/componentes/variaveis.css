@@ -1,0 +1,9 @@
+:root {
+    --black--900: rgb(0, 0, 0);
+    --white--900: rgb(255, 255, 255);
+    --grey--100: rgb(210, 210, 210);
+    --border-radius: 8px;
+    --border: 1px solid var(--grey--100);
+    --amarelinha:#FFD700;
+    --gold:oklch(90.5% 0.182 98.111);
+}

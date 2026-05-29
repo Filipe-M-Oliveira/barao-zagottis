@@ -1,0 +1,46 @@
+@import url(variaveis.css);
+footer {
+  background-color: var(--gold);
+  margin: 0%;
+}
+
+.footer section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    margin: auto;
+    display: flex !important;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: stretch;
+    background-color: var(--gold);
+    color: black;
+}   
+
+/* cada coluna */
+.footer .col {
+  flex: 1;
+  padding: 0 20px;
+}
+
+/* LINHA PRETA ENTRE AS DIVS */
+.footer .col:not(:last-child) {
+  border-right: 3px solid black;
+}
+
+.footer .col img {
+  border-radius: 50%;
+  width: fit-content;
+}
+
+/* títulos */
+.footer h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* textos */
+.footer p {
+  margin: 5px 0;
+}
+
